@@ -27,7 +27,7 @@ public class Inventario {
         return valorBase - descuentoAntiguedad - penalizacionRotacion + bonificacionStock + ajusteCategoria;
     }
 
-    private static double calcularAjusteCategoria(String tipoCategoria, double valorBase) {
+    public static double calcularAjusteCategoria(String tipoCategoria, double valorBase) {
         double ajusteCategoria = 0;
         if (tipoCategoria.equals("premium")) {
             ajusteCategoria = valorBase * PORCENTAJE_AJUSTE_PREMIUM;
